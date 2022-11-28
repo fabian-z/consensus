@@ -12,9 +12,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/SmartBFT-Go/consensus/pkg/api"
-	"github.com/SmartBFT-Go/consensus/pkg/types"
-	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/api"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/types"
+	protos "github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/proto"
 )

@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/SmartBFT-Go/consensus/smartbftprotos"
+	"github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 	"google.golang.org/protobuf/proto"
 )
 

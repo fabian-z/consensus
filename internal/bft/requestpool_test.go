@@ -14,9 +14,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/SmartBFT-Go/consensus/internal/bft"
-	"github.com/SmartBFT-Go/consensus/internal/bft/mocks"
-	"github.com/SmartBFT-Go/consensus/pkg/types"
+	"github.com/SmartBFT-Go/consensus/v2/internal/bft"
+	"github.com/SmartBFT-Go/consensus/v2/internal/bft/mocks"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/types"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

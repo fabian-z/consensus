@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"testing"
 
-	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
+	protos "github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 	"go.uber.org/zap"
 
-	"github.com/SmartBFT-Go/consensus/pkg/types"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/types"
 	"github.com/stretchr/testify/assert"
 )
 

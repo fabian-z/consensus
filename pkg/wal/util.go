@@ -15,7 +15,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/SmartBFT-Go/consensus/pkg/api"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/api"
 )
 
 var padTable [][]byte

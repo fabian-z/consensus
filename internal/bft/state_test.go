@@ -8,9 +8,9 @@ package bft_test
 import (
 	"testing"
 
-	"github.com/SmartBFT-Go/consensus/internal/bft"
-	"github.com/SmartBFT-Go/consensus/pkg/types"
-	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
+	"github.com/SmartBFT-Go/consensus/v2/internal/bft"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/types"
+	protos "github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/zap"
 )

@@ -12,8 +12,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/SmartBFT-Go/consensus/pkg/api"
-	"github.com/SmartBFT-Go/consensus/pkg/types"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/api"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/types"
 	"github.com/pkg/errors"
 	"golang.org/x/sync/semaphore"
 )

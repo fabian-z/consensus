@@ -15,8 +15,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/SmartBFT-Go/consensus/pkg/api"
-	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/api"
+	protos "github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/proto"
 

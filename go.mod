@@ -1,4 +1,4 @@
-module github.com/SmartBFT-Go/consensus
+module github.com/SmartBFT-Go/consensus/v2
 
 go 1.15
 

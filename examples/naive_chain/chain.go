@@ -8,7 +8,7 @@ package naive
 import (
 	"encoding/asn1"
 
-	smart "github.com/SmartBFT-Go/consensus/pkg/api"
+	smart "github.com/SmartBFT-Go/consensus/v2/pkg/api"
 )
 
 type Block struct {

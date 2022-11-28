@@ -13,8 +13,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/SmartBFT-Go/consensus/pkg/api"
-	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/api"
+	protos "github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 	"google.golang.org/protobuf/proto"
 )
 

@@ -14,10 +14,10 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	algorithm "github.com/SmartBFT-Go/consensus/internal/bft"
-	bft "github.com/SmartBFT-Go/consensus/pkg/api"
-	"github.com/SmartBFT-Go/consensus/pkg/types"
-	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
+	algorithm "github.com/SmartBFT-Go/consensus/v2/internal/bft"
+	bft "github.com/SmartBFT-Go/consensus/v2/pkg/api"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/types"
+	protos "github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 	"github.com/pkg/errors"
 )
 

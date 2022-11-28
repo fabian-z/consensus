@@ -15,9 +15,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/SmartBFT-Go/consensus/pkg/api"
-	"github.com/SmartBFT-Go/consensus/pkg/types"
-	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/api"
+	"github.com/SmartBFT-Go/consensus/v2/pkg/types"
+	protos "github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 	"google.golang.org/protobuf/proto"
 )
 

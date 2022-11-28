@@ -8,7 +8,7 @@ package test
 import (
 	"testing"
 
-	"github.com/SmartBFT-Go/consensus/smartbftprotos"
+	"github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 )
 
 func TestNetwork(t *testing.T) {

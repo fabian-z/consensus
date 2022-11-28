@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/SmartBFT-Go/consensus/smartbftprotos"
+	"github.com/SmartBFT-Go/consensus/v2/smartbftprotos"
 )
 
 type Proposal struct {
