@@ -11,9 +11,7 @@ err() {
 echo -e "\nTesting commit: ------${ANSI_GREEN}" $(git log -1 --no-merges | head -$(( $(git log -1 --no-merges | wc -l) - 2 )) | tail -1) "${ANSI_RESET}------\n"
 
 go get -u golang.org/x/tools/cmd/goimports
-go get -u github.com/golang/protobuf/protoc-gen-go
-
-
+go get -u google.golang.org/protobuf/cmd/protoc-gen-go
 
 BUILDDIR=.build
 if [ ! -d "$BUILDDIR" ]; then
@@ -21,11 +19,11 @@ if [ ! -d "$BUILDDIR" ]; then
 fi
 cd $BUILDDIR
 
-PROTOC_ZIP=protoc-3.8.0-linux-x86_64.zip
+PROTOC_ZIP=protoc-21.9-linux-x86_64.zip
 if [ ! -f "$PROTOC_ZIP" ]; then
     echo "$PROTOC_ZIP does not exist"
-    wget https://github.com/protocolbuffers/protobuf/releases/download/v3.12.3/protoc-3.12.3-linux-x86_64.zip
-    unzip protoc-3.12.3-linux-x86_64.zip
+    wget https://github.com/protocolbuffers/protobuf/releases/download/v21.9/protoc-21.9-linux-x86_64.zip
+    unzip protoc-21.9-linux-x86_64.zip
 fi
 
 export PATH=$PATH:$BUILDDIR/bin/

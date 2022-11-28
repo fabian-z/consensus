@@ -17,8 +17,10 @@ import (
 
 	"github.com/SmartBFT-Go/consensus/pkg/api"
 	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
-	"github.com/golang/protobuf/proto"
 	"github.com/pkg/errors"
+	"google.golang.org/protobuf/proto"
+
+	oldproto "github.com/golang/protobuf/proto"
 )
 
 const (
@@ -76,7 +78,6 @@ type LogRecordHeader uint64
 //
 // In append mode the WAL can accept Append() and TruncateTo() calls.
 // The WAL must be closed after use to release all resources.
-//
 type WriteAheadLogFile struct {
 	dirName string
 	options *Options
@@ -88,7 +89,7 @@ type WriteAheadLogFile struct {
 	index         uint64
 	logFile       *os.File
 	headerBuff    []byte
-	dataBuff      *proto.Buffer
+	dataBuff      *oldproto.Buffer
 	crc           uint32
 	readMode      bool
 	truncateIndex uint64
@@ -147,7 +148,7 @@ func Create(logger api.Logger, dirPath string, options *Options) (*WriteAheadLog
 		logger:        logger,
 		index:         1,
 		headerBuff:    make([]byte, 8),
-		dataBuff:      proto.NewBuffer(make([]byte, opt.BufferSizeBytes)),
+		dataBuff:      oldproto.NewBuffer(make([]byte, opt.BufferSizeBytes)),
 		crc:           walCRCSeed,
 		truncateIndex: 1,
 		activeIndexes: []uint64{1},
@@ -218,7 +219,7 @@ func Open(logger api.Logger, dirPath string, options *Options) (*WriteAheadLogFi
 		options:    opt,
 		logger:     logger,
 		headerBuff: make([]byte, 8),
-		dataBuff:   proto.NewBuffer(make([]byte, opt.BufferSizeBytes)),
+		dataBuff:   oldproto.NewBuffer(make([]byte, opt.BufferSizeBytes)),
 		readMode:   true,
 	}
 
@@ -475,12 +476,12 @@ func (w *WriteAheadLogFile) append(record *protos.LogRecord) error {
 // After a successful invocation the WAL moves to write mode, and is ready to Append().
 //
 // In case of failure:
-//  - an error of type io.ErrUnexpectedEOF	is returned when the WAL can possibly be repaired by truncating the last
-//    log file after the last good record.
-//  - all other errors indicate that the WAL is either
-//  	- is closed, or
-//  	- is in write mode, or
-//  	- is corrupted beyond the simple repair measure described above.
+//   - an error of type io.ErrUnexpectedEOF	is returned when the WAL can possibly be repaired by truncating the last
+//     log file after the last good record.
+//   - all other errors indicate that the WAL is either
+//   - is closed, or
+//   - is in write mode, or
+//   - is corrupted beyond the simple repair measure described above.
 func (w *WriteAheadLogFile) ReadAll() ([][]byte, error) {
 	w.mutex.Lock()
 	defer w.mutex.Unlock()

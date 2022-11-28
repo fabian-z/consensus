@@ -18,7 +18,7 @@ import (
 	"github.com/SmartBFT-Go/consensus/pkg/api"
 	"github.com/SmartBFT-Go/consensus/pkg/types"
 	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
-	"github.com/golang/protobuf/proto"
+	"google.golang.org/protobuf/proto"
 )
 
 type proposalInfo struct {
@@ -170,9 +170,12 @@ type incMsg struct {
 //
 // The calculation satisfies the following:
 // Given a cluster size of N nodes, which tolerates f failures according to:
-//    f = argmax ( N >= 3f+1 )
+//
+//	f = argmax ( N >= 3f+1 )
+//
 // Q is the size of the quorum such that:
-//    any two subsets q1, q2 of size Q, intersect in at least f+1 nodes.
+//
+//	any two subsets q1, q2 of size Q, intersect in at least f+1 nodes.
 //
 // Note that this is different from N-f (the number of correct nodes), when N=3f+3. That is, we have two extra nodes
 // above the minimum required to tolerate f failures.

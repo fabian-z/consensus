@@ -14,8 +14,8 @@ import (
 	"github.com/SmartBFT-Go/consensus/pkg/api"
 	"github.com/SmartBFT-Go/consensus/pkg/types"
 	protos "github.com/SmartBFT-Go/consensus/smartbftprotos"
-	"github.com/golang/protobuf/proto"
 	"github.com/pkg/errors"
+	"google.golang.org/protobuf/proto"
 )
 
 // Phase indicates the status of the view
@@ -30,6 +30,7 @@ const (
 )
 
 // State can save and restore the state
+//
 //go:generate mockery -dir . -name State -case underscore -output ./mocks/
 type State interface {
 	// Save saves a message.

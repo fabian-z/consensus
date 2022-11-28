@@ -14,9 +14,9 @@ import (
 	"testing"
 
 	"github.com/SmartBFT-Go/consensus/smartbftprotos"
-	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/zap"
+	"google.golang.org/protobuf/proto"
 )
 
 func TestLogRecordReader(t *testing.T) {
